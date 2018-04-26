@@ -1,0 +1,119 @@
+// TODO update to flexbox so you can show off your style skills...this won't impress anyone.
+@import '~styles/palette';
+@import '~styles/common';
+
+$select: #ad0000;
+
+%window {
+  background-color: #adaaad;
+  width: 80%;
+  height: 180px;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 30px 15px 0px black;
+  .window-content {
+    display: flex;
+    justify-content: center;
+  }
+  .window-border {
+    border: 1px double black;
+    margin: 20px 10px;
+    top: 10px;
+    position: relative;
+    height: 80%;
+  }
+  .title {
+    color: #ad2526;
+    text-align: center;
+    width: 60%;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    top: -9px;
+    background-color: #adaaad;
+  }
+}
+
+:host {
+  display: flex;
+  height: 100%;
+}
+
+#clonezilla-component {
+  font-family: 'Courier New', Courier, monospace;
+  background-color: $blue;
+  width: 100%;
+
+  .top-left-title {
+    color: gray;
+  }
+
+  .window.menu {
+    @extend %window;
+    .window-content {
+      ul {
+        list-style: none;
+        padding: 0;
+        width: 80%;
+        li {
+          display: flex;
+          width: 100%;
+          span {
+            width: 50%;
+            text-align: left;
+            margin-right: 20px;
+            cursor: default;
+            &:nth-of-type(2) {
+              flex: 1 0 auto;
+            }
+          }
+          &:hover {
+            background-color: $select;
+          }
+        }
+      }
+    }
+  }
+
+  .window.detail {
+    @extend %window;
+    .window-content {
+      height: 80%;
+      position: relative;
+      .menu-detail {
+        position: relative;
+        width: 100%;
+        text-align: center;
+        padding: 0 20px;
+        cursor: default;
+        .yellow {
+          color: yellow;
+        }
+
+        &.savedisk {
+          .backup-complete {
+            padding: 20px;
+            font-weight: bold;
+          }
+        }
+        .buttons {
+          position: absolute;
+          width: 100%;
+          bottom: 0;
+          button {
+            background-color: transparent;
+            border: none;
+            font-size: 16px;
+            font-family: inherit;
+
+            &:hover {
+              background-color: white;
+            }
+          }
+        }
+      }
+    }
+  }
+}

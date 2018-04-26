@@ -1,15 +1,6 @@
+import 'normalize.css/normalize.css?global';
 
-require('normalize.css/normalize.css');
-require('./styles/index.scss');
-
-document.addEventListener("DOMContentLoaded", () => {
-
-    const pluginsTriggerElement = document.getElementById('plugins-trigger');
-    const pluginsElement = document.getElementById('plugins');
-
-    const pluginsVisibleClass = "splash-overview-plugins__list--visible";
-
-    pluginsTriggerElement.onclick = () => {
-        pluginsElement.classList.toggle(pluginsVisibleClass);
-    }
-});
+import 'styles/main.scss?global';
+import Injector from 'core';
+import { AppComponent } from './app.component';
+window.customElements.define('app-component', AppComponent);

@@ -1,0 +1,26 @@
+#progress-component {
+  text-align: left;
+  .yellow {
+    color: yellow;
+  }
+  .orange {
+    color: orange;
+  }
+  .spinner {
+    font-size: 20px;
+    font-weight: bold;
+    display: inline-block;
+  }
+  .open-bracket,
+  .close-bracket {
+    display: inline-block;
+  }
+  .close-bracket {
+    float: right;
+  }
+  .progress-bar {
+    overflow-x: hidden;
+    display: inline-block;
+    color: green;
+  }
+}

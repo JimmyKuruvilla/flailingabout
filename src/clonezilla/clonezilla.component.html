@@ -1,0 +1,96 @@
+<div id="clonezilla-component">
+  <div class="top-left-title">Free Software Labs NCHC, Taiwan</div>
+
+  <div class="window menu">
+    <div class="window-border">
+      <div class="title">Welcome to Clonezilla</div>
+      <div class="window-content">
+        <ul>
+          <li class="menu-item why">
+            <span>why...</span>
+            <span>would you do this</span>
+          </li>
+          <li class="menu-item savedisk">
+            <span>savedisk</span>
+            <span>Save_local_disk_as_an_image</span>
+          </li>
+          <li class="menu-item restoredisk">
+            <span>restoredisk</span>
+            <span>Restore_local_disk_from_an_image</span>
+          </li>
+          <li class="menu-item recoverisozip">
+            <span>recover-iso-zip</span>
+            <span>Create_bootable_usb_recovery</span>
+          </li>
+          <li class="menu-item exit">
+            <span>exit</span>
+            <span>Exit. Enter command line prompt</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="window detail hidden">
+    <div class="window-border">
+      <div class="title">Info</div>
+      <div class="window-content">
+        <p class="why hidden menu-detail">
+          <a href="https://clonezilla.org/" target="_blank">Clonezilla</a> is software that can create images of partitions or whole disks for replication
+          or backups. I've used it a lot over the years and it has saved me many times. While functionally
+          excellent, Clonezilla uses an ncurses text based UI. I thought it would be interesting to intentionally
+          put a console UI within a web context.
+        </p>
+
+        <div class="savedisk hidden menu-detail">
+          Are you sure you want to save /dev/sda1: ext3, 160GB to sda1.bkp?
+
+          <progress-component class="hidden"></progress-component>
+
+          <div class="backup-complete hidden yellow">
+            Backup Complete
+          </div>
+
+          <div class="buttons">
+            <button class="ok">
+              &ltOk&gt
+            </button>
+            <button class="cancel">
+              &ltCancel&gt
+            </button>
+          </div>
+        </div>
+
+        <div class="restoredisk hidden menu-detail">
+          <div class="yellow">**WARNING THIS WILL OVERWRITE ALL CONTENTS OF THE DISK**</div>
+          Are you sure you want to restore sda1.bkp to /dev/sda1 ?
+
+          <!-- <div class="progress-component hidden">
+            <div class="open-bracket">[</div>
+            <div class="progress-bar"></div>
+            <div class="close-bracket">]</div>
+          </div> -->
+
+          <div class="buttons">
+            <button class="ok">
+              &ltOk&gt
+            </button>
+            <button class="cancel">
+              &ltCancel&gt
+            </button>
+          </div>
+        </div>
+
+        <div class="recoverisozip hidden menu-detail ">
+          <div class="yellow ">Creating boot disk... circle animation.</div>
+          timer return to base
+        </div>
+
+        <div class="exit hidden menu-detail ">
+          <div class="console ">
+            console here
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
